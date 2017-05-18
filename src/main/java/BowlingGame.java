@@ -4,15 +4,15 @@ public class BowlingGame {
 
     public int getBowlingScore(String bowlingCode) {
         int score = 0;
-		int numSplit = 0;
-		int frameNum = 0;
-		String[] sArr = bowlingCode.split("\\|");
-		//System.out.println(Arrays.toString(sArr));
-		for(int i = 0; i < 10; i++){//计算每一个frame，然后相加
-			frameNum++;//正在计算第几个格
-			//System.out.println("第"+i+"个frame的得分是："+colFrameScore(frameNum, i, sArr));
-			score = score + colFrameScore(frameNum, i, sArr);
-		}
+	int numSplit = 0;
+	int frameNum = 0;
+	String[] sArr = bowlingCode.split("\\|");
+	//System.out.println(Arrays.toString(sArr));
+	for(int i = 0; i < 10; i++){//计算每一个frame，然后相加
+		frameNum++;//正在计算第几个格
+		//System.out.println("第"+i+"个frame的得分是："+colFrameScore(frameNum, i, sArr));
+		score = score + colFrameScore(frameNum, i, sArr);
+	}
         return score;
     }
     private static int colFrameScore(int frameNum, int i, String[] sArr) {
